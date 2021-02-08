@@ -18,23 +18,26 @@ namespace Mocking.Units
         }
     }
 
-    public class AlgorithmPropertyHash : PropertyHash, IDisposable
+    public interface IHashAlgorithmFactory
     {
-        private readonly HashAlgorithm _algorithm;
+        public HashAlgorithm Create();
+    }
 
-        public AlgorithmPropertyHash(string algorithm)
+    public class AlgorithmPropertyHash
+    {
+        private readonly IHashAlgorithmFactory _algorithmFactory;
+
+        public AlgorithmPropertyHash(IHashAlgorithmFactory algorithmFactory)
         {
-            _algorithm = HashAlgorithm.Create(algorithm) ?? throw new ArgumentException(algorithm);
+            _algorithmFactory = algorithmFactory;
         }
 
-        public override string Hash<T>(T input, params Func<T, string>[] selectors)
+        public string Hash(string seed)
         {
-            var seed = base.Hash(input, selectors);
             var seedBytes = Encoding.UTF8.GetBytes(seed);
-            var hashBytes = _algorithm.ComputeHash(seedBytes);
+            using var algo = _algorithmFactory.Create();
+            var hashBytes = algo.ComputeHash(seedBytes);
             return Convert.ToBase64String(hashBytes);
         }
-
-        public void Dispose() => _algorithm.Dispose();
     }
 }

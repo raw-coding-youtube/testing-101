@@ -13,8 +13,7 @@
         {
             if (something is {Name: {Length: >0}})
             {
-                _store.Save(something);
-                return new(true);
+                return new(_store.Save(something));
             }
 
             return new(false, "Somethings not valid.");
@@ -24,7 +23,7 @@
 
         public interface IStore
         {
-            void Save(Something something);
+            bool Save(Something something);
         }
 
         public class Something

@@ -5,10 +5,24 @@ namespace Mocking.Units
 {
     public class DontTestMicrosoftApi
     {
-        public static Task SaveFile(string path, Stream file)
+        private readonly IFiles _files;
+
+        public DontTestMicrosoftApi(IFiles files)
         {
-            var fileStream = File.OpenWrite("path");
+            _files = files;
+        }
+
+        public Task SaveFile(string path, Stream file)
+        {
+            // more work
+            var fileStream = _files.OpenWriteStreamTo(path);
+            // more work
             return file.CopyToAsync(fileStream);
         }
+    }
+
+    public interface IFiles
+    {
+        Stream OpenWriteStreamTo(string path);
     }
 }
