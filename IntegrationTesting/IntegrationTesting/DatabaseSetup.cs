@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Npgsql;
 
-namespace IntegrationTesting.Components.Database
+namespace IntegrationTesting
 {
     public class DatabaseSetup
     {
