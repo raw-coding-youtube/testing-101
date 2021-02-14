@@ -31,7 +31,7 @@ namespace IntegrationTesting.Components.Database
         public async Task<Animal> GetAnimal(int id)
         {
             var query = "select * from animals where id = (@id) limit 1";
-            await using var queryReader = await _database.Query(query, new() {["id"] = id.ToString()});
+            await using var queryReader = await _database.Query(query, new() {["id"] = id});
             if (await queryReader.ReadAsync())
             {
                 return new(

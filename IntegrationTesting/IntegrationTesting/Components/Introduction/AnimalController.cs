@@ -18,5 +18,10 @@ namespace IntegrationTesting.Components.Introduction
         {
             return Ok(_ctx.Animals.ToList());
         }
+
+        public IActionResult Get(int id)
+        {
+            return Ok(_ctx.Animals.FirstOrDefault(x => x.Id == id));
+        }
     }
 }

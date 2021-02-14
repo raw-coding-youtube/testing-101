@@ -13,7 +13,7 @@ namespace IntegrationTesting.Components.Database
             _connection = connection;
         }
 
-        public async Task<NpgsqlDataReader> Query(string query, Dictionary<string, string> parameters = null)
+        public async Task<NpgsqlDataReader> Query(string query, Dictionary<string, object> parameters = null)
         {
             await using var cmd = new NpgsqlCommand(query, _connection);
 
