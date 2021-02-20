@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawCoding.WebApp", "RawCoding.WebApp\RawCoding.WebApp.csproj", "{0B5100EA-C9E7-4321-8DDC-C5E2B2215E8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawCoding.WebApp.IntegrationTests", "RawCoding.WebApp.IntegrationTests\RawCoding.WebApp.IntegrationTests.csproj", "{7AAA34DB-2077-47F7-9A1D-71F8632B815D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B5100EA-C9E7-4321-8DDC-C5E2B2215E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5100EA-C9E7-4321-8DDC-C5E2B2215E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5100EA-C9E7-4321-8DDC-C5E2B2215E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5100EA-C9E7-4321-8DDC-C5E2B2215E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AAA34DB-2077-47F7-9A1D-71F8632B815D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AAA34DB-2077-47F7-9A1D-71F8632B815D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AAA34DB-2077-47F7-9A1D-71F8632B815D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AAA34DB-2077-47F7-9A1D-71F8632B815D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
