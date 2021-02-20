@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SampleApp.Controllers;
+using SampleApp.Services;
 
 namespace SampleApp
 {
@@ -26,6 +27,8 @@ namespace SampleApp
             services.AddControllers();
 
             services.Configure<FileSettings>(_config.GetSection(nameof(FileSettings)));
+
+            services.AddSingleton<IAnimalService, AnimalService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0c895d81_002D7694_002D4afb_002Dadba_002D312a868bd119/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetsAnimal" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::0C39CA66-8FAA-4033-BA27-46E54FA7B636::net5.0::SampleApp.IntegrationTesting.AnimalEndpointTests.GetsAnimal&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0C39CA66-8FAA-4033-BA27-46E54FA7B636::net5.0::SampleApp.IntegrationTesting.FileEndpointTests.SavesFileToDisk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0C39CA66-8FAA-4033-BA27-46E54FA7B636::net5.0::SampleApp.IntegrationTesting.FileEndpointTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
